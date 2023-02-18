@@ -1,0 +1,16 @@
+<!--pages/about/about.wxml-->
+<view class='versiondesc'>当前软件版本为:{{appswversion}}</view>
+<view class="charts">
+  <canvas canvas-id="rkUUzgrXDwwzNOZFeqIQxKSubnuNzYxn" id="rkUUzgrXDwwzNOZFeqIQxKSubnuNzYxn" class="charts" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="tap"/>
+</view>
+<view class='locat'>
+  <view class ='locat-map'>
+      <map longitude='{{longitude}}' latitude='{{latitude}}' scale='14' markers="{{markers}}" style="width: 375px; height: 500px;"></map>
+  </view>
+  <view class ='locat-title'>
+      <text>{{location}}</text>
+  </view>
+  <view class ='locat-btn'>
+  <button type='success' size = 'limit' class='location' bindtap='getLocation'>定位</button>
+  </view>
+</view>

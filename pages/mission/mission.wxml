@@ -1,0 +1,15 @@
+<!--pages/mission/mission.wxml-->
+<!-- <scroll-view class="missionlist" scroll-y="true"> -->
+  <view>
+    <view class='listhead'>
+      <view class='arrow'>任务类型</view>
+      <view class='arrow'>任务简述</view>
+      <view class='missionsta1'>任务状态</view>
+    </view>
+  </view>
+  <view class='content' wx:for="{{missionarry}}" wx:key="index" bindtap='ToMissionDetail' data-id='{{item.Recordid}}'>
+    <view class='arrow'>{{item.mission_type}}</view>
+    <view class='arrow'>{{item.mission_short_desc}}</view>
+    <view class='missionsta'>{{item.mission_sta}}</view>
+  </view>
+<!-- </scroll-view> -->

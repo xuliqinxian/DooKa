@@ -1,0 +1,11 @@
+<template name='mycrewlist'>
+  <view class='content' bindtap="CallingTap">
+      <view class='rank'>1</view>
+      <image class='img1' src='../../images/userimg.png'></image>
+      <view class='arrow'>{{username}}</view>
+      <view class='arrow'>{{userID}}</view>
+      <image class='img2' data-value="{{userID}}" src='../../images/call.png'></image>
+      <image class='img3' src='../../images/good.png'></image>
+      <image class='img4' src='../../images/sendmsg.png'></image>
+  </view>
+</template>

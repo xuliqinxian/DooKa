@@ -1,0 +1,62 @@
+<!--pages/askforleave/askforleave.wxml-->
+<view class='missiondetail'>
+  <view class='normalrow'>
+    <view class='rowleft'>请假人：</view>
+    <view class='rowright'>{{username}}</view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>工号：</view>
+    <view class='rowright'>{{userID}}</view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>请假时间：</view>
+    <view class='rowright'>
+      <view class="section" wx:if="{{islock}}">
+        <view>{{recordstarttime}}</view>
+      </view>
+      <view class="section" wx:else>
+        <picker mode="date" disabled="{{islock}}" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange1">
+          <view class="picker">
+            {{selectstarttime.date}}
+          </view>
+        </picker>
+        <picker mode="time" disabled="{{islock}}" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange1">
+          <view class="picker">
+            {{selectstarttime.time}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>请假时长：</view>
+    <view class='rowright'>
+      <view class="section" wx:if="{{islock}}">
+        <view>{{recordclosedtime}}</view>
+      </view>
+      <view class="section" wx:else>
+        <picker mode="date" disabled="{{islock}}" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange2">
+          <view class="picker">
+            {{selectclosedtime.date}}
+          </view>
+        </picker>
+        <picker mode="time" disabled="{{islock}}" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange2">
+          <view class="picker">
+            {{selectclosedtime.time}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <view class='unnormalrow'>
+    <view class='col_top'>请假事由(必填)</view>
+    <view class='col_dwn'>
+      <input type="text"  disabled="{{islock}}"  bindinput="handledescChanges" placeholder="输入你的请假理由" class ="input_cell" value = '{{excusedesc}}'></input>
+    </view>
+  </view>
+  <view>
+    <button type="default" wx:if="{{isshow}}" bindtap="DoIt">提交请假条</button>
+    <button type="default" wx:else bindtap="ApproveIt">审批</button>
+  </view>
+</view>
+

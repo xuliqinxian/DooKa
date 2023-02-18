@@ -1,0 +1,65 @@
+/* pages/equipmentexception/equipmentexception.wxss */
+.normalrow{
+  display: flex;
+  height: 80rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+  /* font-size: 25rpx; */
+}
+.input_cell{
+  width: 90%;
+  padding: 20rpx;
+  text-align: justify;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  word-break:break-all;
+}
+.rowleft{
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  font-size: 25rpx;
+  width: 30%;
+  border: 1rpx solid #eee;
+}
+.rowright{
+  width: 60%;
+  font-size: 25rpx;
+}
+.page__bd{
+  margin-top: 15rpx;
+}
+.page__bd radio{
+  padding-left: 50rpx;
+}
+.unnormalrow{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+  /* font-size: 25rpx; */
+}
+.col_top{
+  margin-top: 20rpx;
+  height: 30rpx;
+  padding-left: 30rpx;
+  font-size: 25rpx;
+}
+.col_dwn{
+  height: 200rpx;
+  font-size: 25rpx;
+}
+.picker{
+  background-color: chartreuse;
+  margin-left: 20rpx;
+}
+.section{
+  display: flex;
+}
+.rowright picker{
+  padding-top: 20rpx;
+}
+.submit{
+  padding: 20rpx;
+}

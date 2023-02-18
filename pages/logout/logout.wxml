@@ -1,0 +1,32 @@
+<!--pages/logout/logout.wxml-->
+<view>
+  <button class='logout' bindtap='logout'>退出登录</button>
+</view>
+<!-- <view>
+  <button class='logout' bindtap='changepassword'>修改密码</button>
+</view> -->
+<view class = 'camerabox'>
+  <!-- <camera mode="normal" device-position="front" flash="auto" binderror="error" style="width:100%; height:250px;"></camera>
+  <button type="primary" bindtap="takePhoto" class = 'takePhoto'>拍照</button> -->
+  <!-- <view class='imagepath'>{{src}}</view> -->
+</view>
+<view class='list'>
+  <view class="item" wx:for="{{imgs}}" wx:key='index'>
+    <image src='{{item}}'></image>
+</view>
+</view>
+
+<!-- <view class="img-wrap">
+  <view class="txt">上传图片</view>
+  <view class="imglist">
+    <view class="item" wx:for="{{imgs}}" wx:key="item">
+      <image src="{{item}}" alt=""></image>
+      <view class='delete' bindtap='deleteImg' data-index="{{index}}">
+        <image src="../../../images/icon.png"></image>
+      </view>
+    </view>
+    <view class="last-item" wx:if="{{imgs.length >= 3 ? false : true}}" bindtap="bindUpload">
+      <text class="sign">+</text>
+    </view>
+  </view>
+</view> -->

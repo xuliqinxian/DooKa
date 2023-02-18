@@ -1,0 +1,178 @@
+<!--index.wxml-->
+<view class='currentsta'>
+    <view class='col_left'>
+    <view class='col_left_img'>
+      <image src='../../images/userimg.png'>员工头像</image>
+    </view>
+      <view class='col_left_subitem'>
+        <view class='col_left_subitem_1'>
+          <view>姓名: {{username}}</view>
+          <!-- <image src='../../images/good.png'></image> -->
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>工号: {{userID}}</view>
+          <!-- <image src='../../images/good.png'></image> -->
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>工龄: {{useronboard}}</view>
+          <!-- <image src='../../images/good.png'></image> -->
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>岗位: {{currentstationcode}}</view>
+          <!-- <image src='../../images/good.png'></image> -->
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>职称: {{duty}}</view>
+          <!-- <image src='../../images/good.png'></image> -->
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>时长: {{dutytime}}</view>        
+          <!-- <image src='../../images/clock.png'></image> -->
+        </view>
+        <!-- <view class='col_left_subitem_2'>
+          <image src='../../images/medal.png'></image>
+          <image src='../../images/medal.png'></image>
+          <image src='../../images/medal.png'></image>
+          <image src='../../images/medal.png'></image>
+          <image src='../../images/medal.png'></image>
+          <image src='../../images/medal.png'></image>
+        </view> -->
+      </view>
+    </view>
+    <view class='col_right'>
+      <view>
+        <view class="AI_box_1">
+          <image src='../../images/AI.png' class='scan_img'></image>
+          <view>小嘟</view>
+        </view>
+      </view>
+      <view>
+        <view class="AI_box_2">
+        <image src='../../images/voiceinput.png' class='scan_img'></image>
+      </view>
+  </view>
+</view>
+</view>
+<view class='functionarea'>
+        <view class='item'  bindtap="ToScan">
+        <image src='../../images/scanicon.png'></image>
+          <view>上班卡</view>
+        </view>
+        <view class='item' bindtap='offduty'>   
+        <image src='../../images/offduty.png'></image>
+          <view>下班卡</view>
+        </view>
+        <view class='item' bindtap='askforleave'>
+        <navigator url='../askforleavemain/askforleavemain?name={{username}}&id={{userID}}'>    
+        <image src='../../images/stackreport.png'></image>
+          <view>请假</view>
+          </navigator>
+        </view>
+        <view class='item' bindtap='errorreport'>
+        <navigator url='../equipmentexception/equipmentexception?id=7&abc=123'>    
+        <image src='../../images/errorreport.png'></image>
+          <view>异常上报</view>
+          </navigator>
+        </view>
+        <view class='item'  bindtap='takephoto'>
+        <navigator url='../indexDetail/indexDetail?id=7&abc=123'>    
+        <image src='../../images/photo.png'></image>
+          <view>随拍</view>
+          </navigator>
+        </view>
+    </view>
+<scroll-view class='myhonor'>
+   <view class='myhonor-up'>
+      <view class='mission1'>
+        <view class='blockname'>
+          <image src='../../images/mouth.png'></image>
+          <text>本月</text>
+        </view>
+        <view class='mission1_subA'>
+        <view class='mission1_sub'>
+          <view>CTI:125</view>
+          <view>CTO:138</view>
+          <view>任务:113</view>
+        </view>      
+        <view class='mission1_sub'>
+          <view>CTI:125</view>
+          <view>CTO:138</view>
+          <view>任务:113</view>
+        </view>      
+        <view class='mission1_sub'>
+          <view>CTI:125</view>
+          <view>CTO:138</view>
+          <view>任务:113</view>
+        </view>
+        </view>
+    </view>
+    <view class='mission2'>
+      <view class='blockname'>
+        <image src='../../images/week.png'></image>
+        <text>本班</text>
+      </view>
+      <view class='mission1_sub'>
+          <view>CTI:65</view>
+          <view>CTO:80</view>
+          <view>任务:63</view>
+      </view>
+    </view>
+   </view>
+   <view class='myhonor-dn'>
+      <view class='mission3'>
+        <navigator url='../mission/mission'>
+          <view class='blockname'>
+            <image src='../../images/skill.png'></image>
+            <text>技能</text>
+          </view>
+          <view class='mission3_sub'>
+            <view class='mission3_sub_1'>
+              <view>焊接技能等级:1级</view>
+              <image src='../../images/uplevel.png'></image>
+            </view>
+            <view class='mission3_sub_1'>
+              <view>组装技能等级:4级</view>
+              <image src='../../images/uplevel.png'></image>
+            </view>
+            <view class='mission3_sub_1'>
+              <view>测试技能等级:4级</view>
+              <image src='../../images/uplevel.png'></image>
+            </view>
+          </view>
+        </navigator>
+      </view>
+      <view class='mission4'>
+        <view class='blockname'>
+          <image src='../../images/power.png'></image>
+          <text>战力(13级)</text>
+        </view>
+        <view class='mission4_sub'>
+            <view>力量:125</view>
+            <view>工具:138</view>
+            <view>经验:113</view>
+        </view>
+        <view class="progress-box">
+          <progress percent="80" show-info ='false' stroke-width="5"/>
+        </view>
+      </view>
+   </view>
+   
+</scroll-view>
+<!-- <scroll-view class="charts-box" scroll-y="true">
+  <qiun-wx-ucharts 
+    type="radar"
+    opts="{{opts}}"
+    chartData="{{chartData}}"
+  />
+</scroll-view> -->
+<scroll-view scroll-y="true" class="box" style="background-color:{{offdutyflag? 'gray' : 'white' }}" >
+  <view wx:for="{{list}}" wx:key="index" class="one">
+    <view wx:if="{{item.isRedDot}}"class="onedot_red"></view>
+    <view wx:else class="onedot"></view>
+    <view wx:if="{{index!=list.length-1}}" class="oneline"></view>
+    <view class="onemain">
+      <view class="onemaintitle">{{item.time}}</view>
+      <view class="onemaincon">{{item.con}}</view>
+    </view>
+  </view>
+</scroll-view>

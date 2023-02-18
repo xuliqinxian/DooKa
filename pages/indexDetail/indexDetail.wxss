@@ -1,0 +1,36 @@
+/* pages/indexDetail/indexDetail.wxss */
+.title{
+  margin: 20rpx;
+  font-size: 36rpx;
+}
+.img{
+  width: 100%;
+  height: 300rpx;
+}
+.article{
+  width: 90%;
+  padding: 20rpx;
+  text-align: justify;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  word-break:break-all;
+}
+.page-body{
+  padding-left:30rpx;
+}
+.weui-cells{
+  margin-top: 80rpx;
+  text-align: left;
+}
+.weui-label{
+  width: 5em;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+.page-section-tc{
+  padding:30rpx 30rpx;
+}

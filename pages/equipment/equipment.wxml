@@ -1,0 +1,141 @@
+<!--pages/equipment/equipment.wxml-->
+
+<view class='currentsta'>
+    <view class='col_left'>
+      <image class='col_left_img' src='../../images/FCTReal.png'>设备头像</image>      
+      <view class='col_left_subitem'>
+        <view class='col_left_subitem_1'>
+          <view>名称:  测试机</view>
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>工号:  HMT00215</view>        
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>工龄:  20210521</view>
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>岗位:  PCBA二线</view>
+        </view>
+        <view class='col_left_subitem_1'>
+          <view>职称:  性能测试</view>
+        </view>
+      </view>
+    </view>
+    <view class='col_right'>
+      <view>
+        <view class="AI_box_1">
+          <image src='../../images/AI.png' class='scan_img'></image>
+          <view>小嘟</view>
+        </view>
+      </view>
+      <view>
+        <view class="AI_box_2">
+        <image src='../../images/voiceinput.png' class='scan_img'></image>
+      </view>
+  </view>
+</view>
+</view>
+<view class='functionarea'>
+        <view class='item'  bindtap="ToScan">
+        <image src='../../images/scanicon.png'></image>
+          <view>扫码</view>
+        </view>
+        <view class='item'>
+        <navigator url='../equipmentexception/equipmentexception?id=7&abc=123'>    
+        <image src='../../images/errorreport.png'></image>
+          <view>故障打卡</view>
+          </navigator>
+        </view>
+        <view class='item'>
+        <navigator url='../askforleave/askforleave?name={{username}}&id={{userID}}'>    
+        <image src='../../images/stackreport.png'></image>
+          <view>停机申请</view>
+          </navigator>
+        </view>
+        <view class='item'>
+          <picker type="text" value="{{index}}" range="{{equipmentarry}}" bindchange="bindequipmentChange">
+            <!-- <navigator url='../linereport/linereport?name={{username}}&id={{userID}}'>     -->
+            <image src='../../images/police.png'></image>
+              <view>生产打卡</view>
+              <!-- </navigator> -->
+          </picker>
+        </view>
+        <view class='item' wx:if="{{isshow}}"  bindtap='ToApproveMain'>
+            <image src='../../images/approve.png'></image>
+              <view>审批</view>
+        </view>
+</view>
+<view class='myhonor'>
+   <view class='myhonor-up'>
+      <view class='mission1'>
+        <view class='blockname'>
+          <image src='../../images/mouth.png'></image>
+          <text>本月</text>
+        </view>
+        <view class='mission1_subA'>
+        <view class='mission1_sub'>
+          <view>CTI: 102.5</view>
+          <view>CTO: 103.8</view>
+          <view>停机: 11.3</view>
+        </view>      
+        <view class='mission1_sub'>
+          <view>总数: 77,500</view>
+          <view>良率: 93%</view>
+          <view>C/T: 35s</view>
+        </view>      
+        </view>
+    </view>
+    <view class='mission2'>
+      <view class='blockname'>
+        <image src='../../images/week.png'></image>
+        <text>本班</text>
+      </view>
+      <view class='mission1_subA'>
+        <view class='mission1_sub'>
+          <view>CTI: 65</view>
+          <view>CTO: 80</view>
+          <view>停机: 2.3</view>
+      </view>
+      <view class='mission1_sub'>
+          <view>总数: 3,250</view>
+          <view>良率: 97%</view>
+          <view>C/T: 3.4s</view>
+      </view>
+      </view>
+    </view>
+   </view>
+   <view class='myhonor-dn2'>
+      当前时间:{{dataTime}}
+  </view>
+   <view class='myhonor-dn'>
+      <view>
+        <view class='blockname'>
+          <image src='../../images/tongji.png'></image>
+          <text>UPH/良率({{selectdate}}/{{currentlinename}})</text>
+          <picker type="text" value="{{index}}" range="{{linearry}}"bindchange="bindlineChange" class='linepicker'>
+                  <image src='../../images/Line.png'  class='line_img'></image>
+          </picker>
+          <image src='../../images/rili.png' bindtap="calendarclick" class='rili_img'></image>
+          <!-- <picker type="text" value="{{index}}" range="{{stationarry}}"bindchange="bindStationChange" class='linepicker'>
+            <image src='../../images/station_point.png' class='station_img'></image>
+          </picker> -->
+        </view>
+        <view class='dataline'>
+            <view class="charts">
+                <canvas canvas-id="YANHnJpyBVZGCXwvtsvoJIUsISbudkJs" id="YANHnJpyBVZGCXwvtsvoJIUsISbudkJs"  bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="tap" bindindex="getIndex"/>
+            </view>
+          </view>
+      </view>
+   </view>
+</view>
+<scroll-view scroll-y="true" class="box" style="background-color:{{offdutyflag? 'gray' : 'white' }}" >
+  <view wx:for="{{list}}" wx:key="index" class="one">
+    <view wx:if="{{item.isRedDot}}"class="onedot_red"></view>
+    <view wx:else class="onedot"></view>
+    <view wx:if="{{index!=list.length-1}}" class="oneline"></view>
+    <view class="onemain">
+      <view class="onemaintitle">{{item.time}}</view>
+      <view class="onemaincon">{{item.con}}</view>
+    </view>
+  </view>
+</scroll-view>

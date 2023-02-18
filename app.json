@@ -1,0 +1,74 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me",
+    "pages/about/about",
+    "pages/indexDetail/indexDetail",
+    "pages/reg/reg",
+    "pages/login/login",
+    "pages/myScore/myScore",
+    "pages/logout/logout",
+    "pages/myCode/myCode",
+    "pages/myInspirit/myInspirit",
+    "pages/changePassword/changePassword",
+    "pages/community/community",
+    "pages/trainning/trainning",
+    "pages/mission/mission",
+    "pages/missiondetail/missiondetail",
+    "pages/equipment/equipment",
+    "pages/askforleave/askforleave",
+    "pages/askforleavemain/askforleavemain",
+    "pages/equipmentexception/equipmentexception",
+    "pages/calendar/calendar",
+    "pages/linereport/linereport",
+    "pages/approvemain/approvemain"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "DooKa",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "打卡",
+        "iconPath": "/images/index.png",
+        "selectedIconPath": "/images/index_yes.png"
+      },
+      {
+        "pagePath": "pages/equipment/equipment",
+        "text": "设备",
+        "iconPath": "/images/AIequipment.png",
+        "selectedIconPath": "/images/AIequipment-yes.png"
+      },
+      {
+        "pagePath": "pages/mission/mission",
+        "text": "任务",
+        "iconPath": "/images/app-task.png",
+        "selectedIconPath": "/images/app-task-yes.png"
+      },
+      {
+        "pagePath": "pages/trainning/trainning",
+        "text": "学院",
+        "iconPath": "/images/train.png",
+        "selectedIconPath": "/images/train-yes.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/images/me.png",
+        "selectedIconPath": "/images/me_yes.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

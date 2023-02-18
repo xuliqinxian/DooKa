@@ -1,0 +1,40 @@
+<view class="context">
+<view class="top">
+  <image src="../../images/left.png" bindtap="bindPreMonth"></image>
+<view class="currentdate">{{year}}年{{month}}月</view>
+<image src="../../images/right.png" bindtap="bindNextMonth"></image>
+</view>
+<view class="middle">
+  <view wx:for="{{data_arr}}" wx:key="index" class="middle_num" bindtap="bindClickWeek">{{item}}</view>
+</view>
+<view class="calen">
+<view wx:for="{{startWeek}}" wx:key="index" class="calen_blank"></view>
+<view wx:for="{{currentMonthDays}}"
+class='{{index+1==today?"active":"calen_num"}}'
+wx:key="index" bindtap="bindClickDay" data-index='{{index+1}}'>{{index+1}}</view>
+</view>
+</view>
+<view>
+  <canvas canvas-id="column" id="column" class="charts" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="tap" bindindex="getIndex"/>
+</view>
+<view class="section">
+  <view class="section__title">选择查询日期</view>
+  <view>
+    <picker mode="date" value="{{date}}" start="2023-01-01" end="2123-01-01" bindchange="bindDateChange">
+    <view class="picker">
+      当前选择: {{date}}
+    </view>
+  </picker>
+  </view>
+</view>
+<view class="box">
+  <view wx:for="{{list}}" wx:key="index" class="one">
+    <view wx:if="{{item.isRedDot}}"class="onedot_red"></view>
+    <view wx:else class="onedot"></view>
+    <view wx:if="{{index!=list.length-1}}" class="oneline"></view>
+    <view class="onemain">
+      <view class="onemaintitle">{{item.time}}</view>
+      <view class="onemaincon">{{item.con}}</view>
+    </view>
+  </view>
+</view>

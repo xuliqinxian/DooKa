@@ -1,0 +1,21 @@
+<view wx:if="{{!success}}">
+  <view class='row'>
+        <view class='info'>
+               <input  class= 'info-input1' bindinput="handleInputUserID" bindblur="handleBlurUserID" placeholder="请输入你的员工号" />
+         </view>
+         <view wx:if="{{usernametextshow}}">{{usernametext}}</view>
+ </view>
+  <view class='row'>
+        <view class='info'>
+               <input type='password' class= 'info-input' bindinput="handleNewChanges" placeholder="请输入你的密码" />
+         </view>
+ </view>
+ <view class='regnote' bindtap="toChangePassword">忘记密码?</view>
+ <!-- <view class='regnote' bindtap="toReg">暂无账号？点击注册</view> -->
+ <button class='submit' bindtap='submit'>登 录</button>
+ <!-- <button class='submit' bindtap='toReg'>注 册</button> -->
+ </view>
+ <view class = 'success' wx:if="{{success}}">
+ <view class='cheer'><icon type="success" size="24"/> 登录成功</view>
+ <!-- <button type = "default" class = 'return' bindtap='return_home'>返回首页</button> -->
+ </view>

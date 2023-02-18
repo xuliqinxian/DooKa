@@ -1,0 +1,17 @@
+<!--pages/calendar/calendar.wxml-->
+<view class="context">
+<view class="top">
+  <image src="../../images/left.png" bindtap="bindPreMonth"></image>
+<view class="currentdate">{{year}}年{{month}}月</view>
+<image src="../../images/right.png" bindtap="bindNextMonth"></image>
+</view>
+<view class="middle">
+  <view wx:for="{{data_arr}}" wx:key="index" class="middle_num" bindtap="bindClickWeek">{{item}}</view>
+</view>
+<view class="calen">
+<view wx:for="{{startWeek}}" wx:key="index" class="calen_blank"></view>
+<view wx:for="{{currentMonthDays}}"
+class='{{index+1==today?"active":"calen_num"}}'
+wx:key="index" bindtap="bindClickDay" data-index='{{index+1}}'>{{index+1}}</view>
+</view>
+</view>

@@ -1,0 +1,74 @@
+.additem{
+  text-align: center;
+  margin: 20rpx;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 10rpx;
+}
+.additem image{
+  width: 50rpx;
+  height: 50rpx;  
+}
+.listheadcontain{
+  margin: 20rpx;
+}
+.itemlist{
+  margin: 20rpx;
+  width: 94%;
+  border: 1rpx solid #f7f7f7;
+  height: 800rpx;
+  border-radius: 10rpx
+}
+.noFound{
+  text-align: center;
+  padding-top: 150rpx;
+}
+.listhead{
+  background-color: #fff;
+  display: flex;
+  height: 100rpx;
+  font-size: 25rpx;
+  color: white;
+  flex-direction: row;
+  margin: 15rpx 15rpx;
+  align-items: center;
+  position: relative;
+  border: 1rpx solid #eee; 
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  position:relative;
+  background-color: #00afa5;
+}
+.missionsta1{
+  text-align: center;
+  border-radius: 20rpx; 
+  position:absolute;
+  margin-left: 570rpx;  
+}
+.arrow{
+  padding: 20rpx;
+}
+.content{
+  background-color: #fff;
+  display: flex;
+  font-size: 25rpx;
+  flex-direction: row;
+  margin: 15rpx 15rpx;
+  align-items: center;
+  position: relative;
+  border: 1rpx solid #eee; 
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  position:relative;
+}
+.missionsta{
+  background:rgb(14, 126, 101);
+  border: 1rpx solid #eee;
+  height: 60rpx;
+  width: 130rpx;
+  text-align: center;
+  color: white;
+  border-radius: 20rpx; 
+  position:absolute;
+  margin-left: 530rpx;
+}
+

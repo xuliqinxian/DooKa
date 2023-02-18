@@ -1,0 +1,152 @@
+<!--pages/linereport/linereport.wxml-->
+<view class='missiondetail'>
+  <view class='normalrow'>
+    <view class='rowleft'>线别:</view>
+    <view class='rowright'>
+      <picker type="text" disabled="{{islock}}" value="{{index}}" range="{{linearry}}" bindchange="bindLineChange">
+      <view class='pickvalue'>{{currentlinename}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>打卡日期:</view>
+    <view class='rowright'>
+      <view class="section" wx:if="{{islock}}">
+        <view>{{reporttime}}</view>
+      </view>
+      <view wx:else class="section">
+      <picker mode="date" disabled="{{islock}}" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange1">
+          <view class="picker">
+            {{selectstarttime.date}}
+          </view>
+        </picker>
+        <picker mode="time" disabled="{{islock}}" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange1">
+          <view class="picker">
+            {{selectstarttime.time}}
+          </view>
+        </picker>
+      </view>
+  </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>型号:</view>
+    <view class='rowright'>
+      <picker type="text" disabled="{{islock}}" value="{{index}}" range="{{PDOrderCodearry}}" bindchange="bindPDOrderCodeChange">
+      <view class='pickvalue'>{{currentPDOrderCode}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>工站:</view>
+    <view class='rowright'>
+      <picker type="text" disabled="{{islock}}" value="{{index}}" range="{{stationnamearry}}" bindchange="bindstationChange">
+      <view class='pickvalue'>{{currentstationname}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>维修/保养:</view>
+    <view class='rowright'>
+      <picker type="text" disabled="{{islock}}" value="{{index}}" range="{{RepChkarry}}" bindchange="bindRepChkChange">
+      <view class='pickvalue'>{{currentRepChk}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>任务等级:</view>
+    <view class='rowright'>
+      <picker type="text" disabled="{{islock}}" value="{{index}}" range="{{missiondegreearry}}" bindchange="bindLineChange">
+      <view class='pickvalue'>{{currentmissiondegree}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>受影响工时(hrs):</view>
+    <view class='rowright'>
+      <view class="stepper">  
+          <!-- 减号 -->  
+          <text class="{{minusStatus}}" disabled="{{islock}}" bindtap="bindMinus">-</text>  
+          <!-- 数值 -->  
+          <input type="number" disabled="{{islock}}" bindchange="bindManual" value="{{num}}" />  
+          <!-- 加号 -->  
+          <text class="normal" disabled="{{islock}}" bindtap="bindPlus">+</text>  
+      </view> 
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>成本损失(rmb):</view>
+    <view class='rowright'>
+      <input type="text" value="{{loseother}}" disabled="{{islock}}" bindinput="handleLoseOtherChanges" placeholder="输入成本损失" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>打卡人工号:</view>
+    <view class='rowright'>
+      <input type="text" value="{{userID_reporter}}" disabled="{{islock}}" bindinput="handleReporterChanges" bindblur="handleBlurReporter" placeholder="输入打卡人工号" class ="input_cell"></input>
+    </view>
+  </view> 
+  <view class='unnormalrow'>
+    <view class='col_top'>任务与描述:</view>
+    <view class='col_dwn'>      
+        <input type="text" value="{{issue_description}}" disabled="{{islock}}" bindinput="handledescChanges" placeholder="输入任务描述" class ="input_cell"></input>
+    </view>
+  </view>
+  <!-- <view class='normalrow'>
+    <view class='rowleft'>维修班次:</view>
+    <view class='rowright'>
+      <view class="page__bd">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange3">
+                <radio class="radio" wx:for-items="{{dayandnightopt}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+    </view>
+  </view> -->
+  <view class='normalrow'>
+    <view class='rowleft'>负责人工号:</view>
+    <view class='rowright'>
+      <input type="text" value="{{userID}}" disabled="{{islock}}" bindinput="handleOwnnerChanges" bindblur="handleBlurOwnner" placeholder="输入负责人工号" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='unnormalrow'>
+    <view class='col_top'>原因分析/改善对策:</view>
+    <view class='col_dwn'>
+      <input type="text" value="{{issue_cause}}" disabled="{{islock}}" bindinput="handlecauseChanges" placeholder="输入原因分析/对策" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow' wx:if="{{showrecheck}}">
+    <view class='rowleft'>审核人工号:</view>
+    <view class='rowright'>
+      <input type="text" value="{{recheck_userID}}" bindinput="handleRechkerIDChanges" bindblur="handleBlurRechkerID" placeholder="输入审核人工号" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow' wx:if="{{showrecheck}}">
+    <view class='rowleft'>状态:</view>
+    <view class='rowright'>
+      <picker type="text" value="{{index}}" range="{{staarry}}" bindchange="bindStaChange">
+      <view>{{currentsta}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='unnormalrow' wx:if="{{showrecheck}}">
+      <view class='col_top'>审核与评价:</view>
+      <view class='col_dwn'>
+        <input type="text" value="{{recheck_reply}}" bindinput="handleRelayChanges" placeholder="输入审核与评价" class ="input_cell"></input>
+      </view>
+    </view>
+  <view class="submit">
+    <button type="default" wx:if="{{showrecheck}}" bindtap="ApproveIt">审批</button>
+    <button type="default" wx:else bindtap="submitreport">提交打卡信息</button>
+  </view>
+</view>
+
+
+
+
+
+
+
+

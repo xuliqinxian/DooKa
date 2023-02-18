@@ -1,0 +1,92 @@
+/* pages/community/community.wxss */
+@import "../../templates/mycrewlist/mycrewlist.wxss";
+.showscreen {
+  height: 500rpx;
+  width: 94%;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx ;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  display: flex;
+  background-color: white;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;
+}
+.crewview{
+  height: 400rpx;
+  width: 94%;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx ;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  display: flex;
+  background-color: white;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;
+}
+.showscreen1{
+  height: 400rpx;
+  width: 94%;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  margin-bottom: 15rpx ;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  display: flex;
+  background-color: white;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;
+}
+.dataline{
+  background-color: tomato;
+}
+.firstrow{
+  display: flex;
+  margin-top: 50rpx;
+}
+.outputprocess{
+  width: 45%;
+  margin: 12rpx 12rpx;
+  /* border: 1rpx solid #f7f7f7; */
+}
+.CT_Detail{
+  width: 45%;
+  /* border: 1rpx solid #f7f7f7; */
+  margin: 12rpx 12rpx;
+}
+.charts1{
+  padding-top: 30rpx;
+}
+.charts2{
+  padding-top: 30rpx;
+}
+.banner{
+  margin-top: 20rpx;
+  position: relative;
+  padding: 5rpx 20rpx;
+  height: 400rpx;
+}
+.banner .desc{
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  left:0;
+  bottom: 10rpx;
+  right: 0;
+  padding: 12rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+.banner_current{
+  position: absolute;
+  color: #fff;
+  bottom: 20rpx;
+  right: 20rpx;
+  padding: 10rpx;
+  font-size: 24rpx;
+}
+.swiper_img{
+  width: 100%;
+  border-radius: 20rpx;
+  height: 400rpx;
+}
+

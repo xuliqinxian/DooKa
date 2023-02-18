@@ -1,0 +1,30 @@
+/* pages/missiondetail/missiondetail.wxss */
+.normalrow{
+  display: flex;
+  height: 100rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+}
+.rowleft{
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  width: 40%;
+}
+.rowright{
+  width: 60%;
+  padding-top: 30rpx;
+}
+
+.unnormalrow{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+}
+.col_top{
+  height: 50rpx;
+  padding-left: 30rpx;
+}
+.col_dwn{
+  height: 500rpx;
+}

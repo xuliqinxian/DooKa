@@ -1,0 +1,30 @@
+<!--pages/missiondetail/missiondetail.wxml-->
+<view class='missiondetail' wx:for="{{mission}}" wx:key="index">
+  <view class='normalrow'>
+    <view class='rowleft'>任务ID</view>
+    <view class='rowright'>{{item.Recordid}}</view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>任务类型</view>
+    <view class='rowright'>{{item.mission_type}}</view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>任务发起人</view>
+    <view class='rowright'>{{item.mission_owner}}</view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>任务发布时间</view>
+    <view class='rowright'>{{item.mission_posttime}}</view>
+  </view>
+  <view  class='normalrow'>
+    <view  class='rowleft'>任务奖励(积分)</view>
+    <view  class='rowright'>{{item.mission_reword}}</view>
+  </view>
+  <view class='unnormalrow'>
+    <view class='col_top'>任务详细介绍</view>
+    <view class='col_dwn'>{{item.mission_description}}</view>
+  </view>
+  <view>
+    <button type="default" bindtap="DoIt">去完成</button>
+  </view>
+</view>

@@ -1,0 +1,114 @@
+/* pages/me/me.wxss */
+page{
+  background: #f1f1f1;
+}
+.MyVIPCard{
+  height: 400rpx;
+  background:white;
+  border-radius: 15rpx 15rpx;
+  margin: 20rpx 20rpx;
+  box-shadow: 5px 5px 5px #cdcfcf;
+}
+.cardhead{
+  border-radius: 15rpx 15rpx;
+  height: 40%;
+  background: -webkit-linear-gradient(left,black,rgb(27, 34, 37),white);
+  padding-left: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.userinfo{
+  padding-top: 100rpx;
+  padding-left: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.userinfo image{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  margin-right: 20rpx;
+}
+.medal{
+  flex-direction: row;
+  padding: 20rpx;
+  width: 10rpx;
+  height: 10rpx;
+}
+.bighead{
+  background-color: #fff;
+  padding: 10rpx;
+  margin-bottom: 20rpx;
+  min-height: 300rpx;
+  text-align: center;
+}
+.imghead{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  margin-right: 20rpx;
+  margin-top: 60rpx;
+}
+.content{
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding-top: 25rpx;
+  padding-bottom: 25rpx;
+  padding-left: 40rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  align-items: center;
+  position: relative;
+}
+.img1 image{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 10%;
+  overflow: hidden;
+  /* border: 1rpx solid #eee; */
+  margin-right: 20rpx;
+}
+.img2 image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.img2{
+  position:absolute;  
+  width: 60rpx;
+  height: 60rpx;
+  padding-left: 620rpx;
+  border-radius: 10%;
+  overflow: hidden;
+  /* border: 1rpx solid #eee; */
+}
+.arrow{
+  padding: 10rpx;
+}
+.detail{
+  text-align: left;
+}
+.name{
+  font-size: 20px;
+  font-weight: 550;
+  margin-bottom: 10rpx;
+}
+.userID{
+  font-size: 15px;
+  margin-top: 20rpx;
+}
+.userimg{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+  border-radius: 10%;
+  overflow: hidden;
+  border: 1rpx solid #eee;
+  margin-right: 20rpx;
+}

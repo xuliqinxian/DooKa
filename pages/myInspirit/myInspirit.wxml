@@ -1,0 +1,15 @@
+<!--pages/myInspirit/myInspirit.wxml-->
+<view class = 'redpackge'>
+    <image src='../../images/NewBigStart.jpg'></image>
+</view>
+<text>红包来袭，敬请关注</text>
+<view class = "pdshow">
+  <view class ="pdshow_item">
+    <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.alicdn.com%2Fi4%2F2208488621248%2FO1CN01QuYRgi1L5czOPSuEY_%21%212208488621248.jpg&refer=http%3A%2F%2Fimg.alicdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1674185206&t=d96c110fc5623ff322c360eb3729bd45" mode=""/>
+    <view>索隆</view>
+  </view>
+  <view class ="pdshow_item">
+    <image src="https://gw.alicdn.com/imgextra/i1/2201462187824/O1CN010gyU5027fROrgwnVC_!!2201462187824.jpg_Q75.jpg_.webp" mode=""/>
+    <view>乔巴</view>
+  </view>
+</view>

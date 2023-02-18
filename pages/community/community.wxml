@@ -1,0 +1,70 @@
+<!--pages/community/community.wxml-->
+<view class="banner">
+  <swiper class="swiper" autoplay="true" interval="3000" bindchange="swiperChange">
+      <swiper-item class="item" wx:for='{{imgarry}}' wx:key="index">
+          <image class = "swiper_img" src="{{item.url}}"></image>
+          <!-- <view class = "desc">{{item.desc}}</view> -->
+      </swiper-item>
+  </swiper>
+  <!-- <view class = "banner_current">{{currentindex+1}}/{{imgarry.length}}</view> -->
+</view>
+<!-- <import src="../../templates/mycrewlist/mycrewlist.wxml"/> -->
+<scroll-view class='crewview' scroll-y="true">
+  <!-- <view wx:for="{{crewarry}}" class='content' bindtap="CallingTap" data-value="{{item.userID}}"  wx:key='index'>
+        <view class='rank'>{{index+1}}</view>
+        <image class='img1' src='../../images/userimg.png'></image>
+        <view class='arrow'>{{item.username}}</view>
+        <view class='arrow'>{{item.userID}}</view>
+        <image class='img4' src='../../images/sendmsg.png'></image>
+        <image class='img2' src='../../images/call.png'></image>
+        <image class='img3' src='../../images/good.png'></image>
+  </view> -->
+  <view class='group'>
+  <view>
+      <view wx:for="{{crewarry}}" class='content1' bindtap="CallingTap" data-value="{{item.userID}}"  wx:key='index'>
+          <view class='rank'>{{index+1}}</view>
+          <image class='img1' src='../../images/userimg.png'></image>
+          <view class='arrow'>{{item.username}}</view>
+          <view class='arrow'>{{item.userID}}</view>
+    </view>
+  </view>
+  <view>
+    <view wx:for="{{crewarry}}" class='content2' bindtap="CallingTap" data-value="{{item.userID}}"  wx:key='index'>
+        <image class='img2' src='../../images/call.png'></image>
+  </view>
+  </view>
+  <view>
+    <view wx:for="{{crewarry}}" class='content3' bindtap="SendMsgTap" data-value="{{item.userID}}"  wx:key='index'>
+  <image class='img4' src='../../images/sendmsg.png'></image>
+  </view>
+  </view>
+  <view>
+    <view wx:for="{{crewarry}}" class='content4' bindtap="GoodTap" data-value="{{item.userID}}"  wx:key='index'>
+  <image class='img3' src='../../images/good.png'></image>
+  </view>
+  </view>
+  </view>
+  </scroll-view>
+  <scroll-view class='showscreen' scroll-y="true">
+  <view class='firstrow'>
+    <view class='outputprocess'>
+      <!-- <view>计划数</view>
+      <view>产出数</view> -->
+      <view class="charts1">
+        <canvas canvas-id="outputprocess" id="outputprocess" class="charts" bindtouchend="tap"/>
+      </view>
+    </view>
+    <view class='CT_Detail'>
+      <!-- <view>投入CT</view>
+      <view>产出CT</view> -->
+      <view class="charts2">
+        <canvas canvas-id="CT_Detail" id="CT_Detail" class="charts" bindtouchend="tap"/>
+      </view>
+    </view>
+  </view>
+  <!-- <view>当前产线状态</view>
+  <view>盈亏（颜色警告）</view>
+  <view>当班人数</view> -->
+</scroll-view>
+
+

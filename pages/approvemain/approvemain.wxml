@@ -1,0 +1,47 @@
+<!--pages/approvemain/approvemain.wxml-->
+<view wx:if="{{route==1}}">
+  <view class='listheadcontain'>
+  <view class='listhead' >
+      <view class='arrow'>ID</view>
+      <view class='arrow'>事由</view>
+      <view class='arrow'>类型</view>
+      <view class='missionsta1'>状态</view>
+    </view>
+</view>
+<scroll-view class='itemlist' scroll-y="true">
+  <view class='noFound' wx:if="{{nofoundshow}}">
+    无记录
+  </view>
+  <view  wx:else>
+    <view class='content' wx:for="{{datalist}}" wx:key="index" bindtap='ToAskforLeaveDetail' data-id='{{item.Recordid}}'>
+      <view class='arrow'>{{item.Recordid}}</view>
+      <view class='arrow'>{{item.excuse_description}}</view>
+      <view class='arrow'>{{item.excuse_description}}</view>
+      <view class='missionsta'>{{item.current_sta}}</view>
+    </view>
+</view>
+</scroll-view>
+</view>
+<view wx:if="{{route==2}}">
+  <view class='listheadcontain'>
+  <view class='listhead' >
+      <view class='arrow'>ID</view>
+      <view class='arrow'>事由</view>
+      <view class='arrow'>类型</view>
+      <view class='missionsta1'>状态</view>
+    </view>
+</view>
+<scroll-view class='itemlist' scroll-y="true">
+  <view class='noFound' wx:if="{{nofoundshow2}}">
+    无记录
+  </view>
+  <view  wx:else>
+    <view class='content' wx:for="{{datalist2}}" wx:key="index" bindtap='ToLineReportDetail' data-id='{{item.Recordid}}'>
+      <view class='arrow'>{{item.Recordid}}</view>
+      <view class='arrow'>{{item.excuse_description}}</view>
+      <view class='arrow'>{{item.excuse_description}}</view>
+      <view class='missionsta'>{{item.current_sta}}</view>
+    </view>
+</view>
+</scroll-view>
+</view>

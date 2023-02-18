@@ -1,0 +1,107 @@
+/* pages/linereport/linereport.wxss */
+.normalrow{
+  display: flex;
+  height: 80rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+}
+.input_cell{
+  width: 90%;
+  padding: 20rpx;
+  text-align: justify;
+  color: #666;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  word-break:break-all;
+}
+.rowleft{
+  padding-top: 20rpx;
+  padding-left: 30rpx;
+  width: 30%;
+  font-size: 25rpx;
+  border: 1rpx solid #eee;
+}
+.rowright{
+  width: 60%;
+  text-align: center;
+}
+.page__bd{
+  margin-top: 15rpx;
+}
+.page__bd radio{
+  padding-left: 50rpx;
+}
+.unnormalrow{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+}
+.col_top{
+  margin-top: 20rpx;
+  height: 30rpx;
+  padding-left: 30rpx;
+  font-size: 25rpx;
+}
+.col_dwn{
+  height: 200rpx;
+}
+.picker{
+  background-color: chartreuse;
+  margin-left: 20rpx;
+}
+.pickvalue{
+  font-size: 25rpx;
+}
+.section{
+  display: flex;
+  padding-left: 60rpx;
+}
+.rowright picker{
+  padding-top: 20rpx;
+}
+.submit{
+  padding: 20rpx;
+}
+
+/*主容器*/  
+.stepper {  
+  width: 200px;  
+  height: 26px;  
+  /*给主容器设一个边框*/  
+  border: 1px solid #ccc;  
+  border-radius: 3px;  
+  margin:14rpx auto;  
+}  
+
+/*加号和减号*/  
+.stepper text {  
+  width: 22px;  
+  line-height: 26px;  
+  text-align: center;  
+  float: left;  
+}
+
+/*数值*/  
+.stepper input {  
+  width: 150px;  
+  height: 26px;  
+  float: left;  
+  margin: 0 auto;  
+  text-align: center;  
+  font-size: 12px;  
+  /*给中间的input设置左右边框即可*/  
+  border-left: 1px solid #ccc;  
+  border-right: 1px solid #ccc;  
+}  
+
+/*普通样式*/  
+.stepper .normal{  
+  color: black;  
+}  
+
+/*禁用样式*/  
+.stepper .disabled{  
+  color: #ccc;  
+}

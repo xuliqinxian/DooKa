@@ -1,0 +1,17 @@
+<template name='myscoreuchart'>
+  <view>
+    <canvas canvas-id="myid" id="myid" class="charts" tap="tap"/>
+    <!-- <navigator url='../indexDetail/indexDetail?itemid={{item.desc}}&abc=123'>
+    <view class="title">
+            标题占一行，溢出隐藏
+          </view>
+          <view class="item_wrapper">
+            <view class="img">
+                <image src="{{item.url}}" mode=""/>
+          </view>
+          <view class="info">{{item.desc}}</view>
+      </view>
+      <view class="read_num"><text>1234</text>次阅读</view>
+    </navigator> -->
+  </view>
+</template>

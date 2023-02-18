@@ -1,0 +1,52 @@
+/* pages/askforleave/askforleave.wxss */
+/* pages/missiondetail/missiondetail.wxss */
+.normalrow{
+  display: flex;
+  height: 100rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  border: 1rpx solid #eee;
+}
+.input_cell{
+  width: 90%;
+  padding: 20rpx;
+  text-align: justify;
+  color: #666;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-indent: 2em;
+  word-break:break-all;
+}
+.rowleft{
+  padding-top: 30rpx;
+  padding-left: 30rpx;
+  width: 30%;
+}
+.rowright{
+  width: 70%;
+  padding-top: 30rpx;
+  text-align: center;
+}
+
+.unnormalrow{
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #eee;
+}
+.col_top{
+  margin-top: 20rpx;
+  height: 50rpx;
+  padding-left: 30rpx;
+}
+.col_dwn{
+  height: 500rpx;
+}
+.section{
+  display: flex;
+  padding-left: 20rpx;
+}
+.picker{
+  background-color: chartreuse;
+  margin-left: 20rpx;
+}

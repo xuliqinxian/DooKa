@@ -1,0 +1,133 @@
+/* pages/myScore/myScore.wxss */
+.charts {
+  width: 750rpx;
+  height: 400rpx;
+  border: 1rpx solid #f7f7f7;
+}
+.box {
+  padding: 30rpx;
+  margin: 0 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  min-height: 450rpx;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;
+}
+.one {
+  position: relative;
+  padding-bottom: 40rpx;
+}
+.onedot {
+  left: -2rpx;
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  background-color: #67c23a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.onedot_red {
+  left: -2rpx;
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  background-color: #975558;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.oneline {
+  position: absolute;
+  left: 8rpx;
+  height: 100%;
+  border-left: 2px solid #e4e7ed;
+}
+.onemain {
+  position: relative;
+  padding-left: 56rpx;
+  top: -6rpx;
+}
+.onemaintitle {
+  margin-bottom: 16rpx;
+  padding-top: 8rpx;
+  color: #909399;
+  line-height: 1;
+  font-size: 26rpx;
+}
+.onemaincon {
+  color: #303133;
+}
+.section{
+  height: 100rpx;
+  margin: 20rpx 20rpx;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;  
+}
+.section__title{
+  padding-left: 20rpx;
+}
+.picker{
+  padding-left: 20rpx;
+  border:2rpx solid #67c23a;
+}.context{
+  width: 90%;
+  background-color: antiquewhite;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  margin: 15rpx 25rpx;
+}
+.top{
+  height: 50rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.top image{
+  padding: 10rpx;
+  height: 30rpx;
+  width: 30rpx;
+}
+.currentdate{
+  padding: 3rpx;
+}
+.middle{
+  display: flex;
+  margin-top: 10rpx;
+}
+.middle_num{
+  width: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calen{
+  display: flex;
+  padding-top: 20rpx;
+  height: 320rpx;
+  flex-wrap: wrap; /* 必要的时候拆行或拆列。 */
+}
+.calen_blank{
+  width: 14%;
+  height: 20%;
+  background-color: pink;
+}
+.calen_num{
+  width: 14%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active{
+  background-color: rgb(89, 111, 238);
+  width: 14%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}

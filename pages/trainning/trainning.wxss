@@ -1,0 +1,96 @@
+/* pages/trainning/trainning.wxss */
+.list{
+  padding: 20rpx 40rpx;
+}
+.item1{
+  border-bottom: 1rpx solid #eeeeee;
+  padding-bottom: 18rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.title{
+  font-size: 30rpx;
+  color: #1a1a1a;
+  margin-bottom: 18rpx;
+}
+.item_wrapper{
+  display: flex;
+}
+.img image{
+  height: 140rpx;
+  width: 200rpx;
+}
+
+.info{
+  color: #777777;
+  font-size: 26rpx;
+  padding-left: 10rpx;
+}
+.read_num{
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+  font-size: 24rpx;
+  color: #4d4d4d;
+}
+.read_num text{
+  color: red;
+  margin-right: 4rpx;
+}
+.runtime_status{
+  background-color: #fff;
+  padding: 20rpx;
+  margin: 0 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  min-height: 450rpx;
+  border: 1rpx solid #f7f7f7;
+  border-radius: 20rpx;
+}
+.search_box{
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 1rpx solid #f7f7f7;
+  margin: 10rpx;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_img{
+  height: 50rpx;
+  width: 50rpx;
+}
+.scan_img{
+  height: 50rpx;
+  width: 50rpx;
+}
+.input_cell{
+  padding: 20rpx 20rpx;
+  width: 500rpx;
+}
+.recommend{
+  border: 2rpx solid #f7f7f7;
+  border-radius: 20rpx;
+  margin: 10rpx;
+}
+.functionarea{
+  background: #fff;
+  padding-top: 20rpx;
+  margin: 20rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.item{
+  width: 20%;
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  padding-bottom: 10rpx;
+}
+.item image{
+  width: 60rpx;
+  height: 60rpx;
+}

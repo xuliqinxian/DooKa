@@ -1,0 +1,162 @@
+<!--pages/equipmentexception/equipmentexception.wxml-->
+<view class='missiondetail'>
+  <view class='unnormalrow'>
+    <view class='col_top'>问题说明:</view>
+    <view class='col_dwn'>      
+        <input type="text" bindinput="handledescChanges" placeholder="输入问题说明" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='unnormalrow'>
+    <view class='col_top'>原因分析:</view>
+    <view class='col_dwn'>
+      <input type="text" bindinput="handlecauseChanges" placeholder="输入原因分析" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>负责人工号:</view>
+    <view class='rowright'>
+      <input type="text" bindinput="handleOwnnerChanges" bindblur="handleBlurOwnner" placeholder="输入责任人工号" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>维修/保养:</view>
+    <view class='rowright'>
+      <view class="page__bd">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange1">
+                <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>处理时间开始:</view>
+    <view class='rowright'>
+      <view class="section">
+      <picker mode="date" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange1">
+          <view class="picker">
+            {{selectstarttime.date}}
+          </view>
+        </picker>
+        <picker mode="time" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange1">
+          <view class="picker">
+            {{selectstarttime.time}}
+          </view>
+        </picker>
+      </view>
+  </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>处理时间结束:</view>
+    <view class='rowright'>
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange2">
+          <view class="picker">
+            {{selectclosedtime.date}}
+          </view>
+        </picker>
+        <picker mode="time" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange2">
+          <view class="picker">
+            {{selectclosedtime.time}}
+          </view>
+        </picker>
+      </view>
+  </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>线别:</view>
+    <view class='rowright'>
+      <picker type="text" value="{{index}}" range="{{linearry}}" bindchange="bindLineChange">
+      <view>{{currentlinename}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>生产型号:</view>
+    <view class='rowright'>
+      <!-- <picker type="text" value="{{index}}" range="{{linearry}}" bindchange="bindLineChange">
+      <view>{{currentpdcode}}</view>
+      </picker> -->
+      <input type="text" bindinput="handlePDcodeChanges" placeholder="输入产品型号" class ="input_cell"></input>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>工站类型:</view>
+    <view class='rowright'>
+      <view class="page__bd">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange2">
+                <radio class="radio" wx:for-items="{{stationtypeopt}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+  </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>设备工站名:</view>
+    <view class='rowright'>
+      <picker type="text" value="{{index}}" range="{{stationnamearry}}" bindchange="bindStationnameChange">
+      <view>{{currentstationname}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>维修日期:</view>
+    <view class='rowright'>
+      <view class="section">
+  <picker mode="date" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange3">
+    <view class="picker">
+      {{selectdate}}
+    </view>
+  </picker>
+</view>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>维修班次:</view>
+    <view class='rowright'>
+      <view class="page__bd">
+        <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange3">
+                <radio class="radio" wx:for-items="{{dayandnightopt}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text>{{item.value}}</text>
+                </radio>
+            </radio-group>
+        </view>
+    </view>
+    </view>
+  </view>
+  <view class='normalrow'>
+    <view class='rowleft'>状态:</view>
+    <view class='rowright'>
+      <picker type="text" value="{{index}}" range="{{staarry}}" bindchange="bindLineChange">
+      <view>{{currentsta}}</view>
+      </picker>
+    </view>
+  </view>
+  <!-- <view class='normalrow'>
+    <view class='rowleft'>审核时间:</view>
+    <view class='rowright'>
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="{{date}}" end="2099-12-30" bindchange="bindDateChange4">
+          <view class="picker">
+            {{selectrecheckobj.date}}
+          </view>
+        </picker>
+        <picker mode="time" value="{{time}}" start="00:00:00" end="23:59:59" bindchange="bindTimeChange4">
+          <view class="picker">
+            {{selectrecheckobj.time}}
+          </view>
+        </picker>
+      </view>
+  </view>
+  </view> -->
+  <view class="submit">
+    <button type="default"  bindtap="submitreport">提交打卡信息</button>
+  </view>
+</view>

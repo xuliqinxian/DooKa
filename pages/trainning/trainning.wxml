@@ -1,0 +1,84 @@
+<!--pages/trainning/trainning.wxml-->
+<view class="search_box">
+      <input type="text" placeholder="{{scanret}}" class ="input_cell"></input>
+      <image src="/images/scanicon.png" class = "scan_img" bindtap="ToScan"></image>
+      <image src="/images/search.png" class = "search_img" bindtap="ToSearch"></image>
+</view>
+<view class='functionarea'>
+  <view class='item'>
+  <navigator url='../indexDetail/indexDetail?id=7&abc=123'>    
+  <image src='../../images/exam.png'></image>
+    <view>技能考试</view>
+    </navigator>
+  </view>
+</view>
+<view class='functionarea'>
+  <view class='item'>
+  <navigator url='../indexDetail/indexDetail?id=7&abc=123'>    
+  <image src='../../images/FCT.png'></image>
+    <view>测试机</view>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/xi.png'></image>
+    <view>焊锡机</view>
+    </navigator>
+  </view>
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/AOI.png'></image>
+    <view>AOI</view>
+    </navigator>
+  </view>
+
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/robot.png'></image>
+    <view>上下料</view>
+  </navigator>
+  </view>
+
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/rase.png'></image>
+    <view>镭雕</view>
+  </navigator>
+  </view>
+
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/printer.png'></image>
+    <view>打印机</view>
+  </navigator>
+  </view>
+
+  <view class='item'>
+    <navigator url='../indexDetail/indexDetail?id=7&abc=123'>
+    <image src='../../images/sys.png'></image>
+    <view>系统</view>
+    </navigator>
+  </view>
+</view>
+
+<view class='recommend'>
+  <view class="list">
+  <view class="item1" wx:for='{{imgarry}}' wx:key="index">      
+<navigator url='../indexDetail/indexDetail?id={{item.id}}&abc=123'>
+<view class="title">
+        {{item.desc}}
+      </view>
+      <view class="item_wrapper">
+        <view class="img">
+            <image src="{{item.url}}" mode=""/>
+      </view>
+      <view class="info">{{item.desc}}</view>
+  </view>
+  <view class="read_num"><text>1234</text>次阅读</view>
+</navigator>
+  </view>  
+</view>
+</view>
+<view class='runtime_status'>
+  <view wx:if="{{isshow}}">{{retmsg}}</view>
+</view>

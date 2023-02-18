@@ -1,0 +1,21 @@
+/* pages/about/about.wxss */
+.versiondesc{
+  padding: 30rpx 30rpx;
+  text-align: center;
+}
+.charts {
+  width: 750rpx;
+  height: 500rpx;
+}
+.locat{
+  padding:30rpx 30rpx;
+}
+.locat-map{
+  padding:30rpx 30rpx;
+}
+.locat-title{
+  text-align:center;
+}
+.locat-btn{
+  margin-top: 20rpx;
+}

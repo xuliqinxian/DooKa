@@ -1,0 +1,25 @@
+/* pages/myInspirit/myInspirit.wxss */
+page{
+  background:white;
+}
+.redpackge image{
+  padding: 50rpx 40rpx;
+  width: 90%;
+  height: 1000rpx;
+}
+.pdshow{
+  display: flex;
+  flex-direction: row;
+  padding: 0rpx 20rpx;
+  justify-content: space-around;
+}
+.pdshow_item{
+  text-align: center;
+  font-size: 28rpx;
+  color: #676566;
+}
+.pdshow_item image{
+  height: 250rpx;
+  width: 300rpx;
+  border-radius: 20rpx;
+}
